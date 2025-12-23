@@ -9,6 +9,21 @@ for ex. add vehicles to already existing maps.
 
 Note: if no cmdline arg is given to mkbsp then it reads from stdin.
 
+## About vehicles
+
+They are defined in the `Entities lump (29)`. There can be multiple vehicle
+entries and one collision map for each vehicle type.
+
+The collision map points to a model in the `Model lump (27)`. The model has
+one or more brushes so it points to the `Brushes lump (4)`. Each brush has
+one or more brushsides, these are listed in the `Brushsides lump (3)`. Brushes
+don't point to this lump, they just specify how many brushsides they have so
+brushes and brushsides are stored together.
+
+To extract a vehicle's collision map dump a .bsp which has it and look at the
+brushes where the model points, and use the **getbrushes** tool to extract the
+brushsides. See the jeep example below.
+
 ## Example #1: Adding a BMW motorcycle
 
 1. Download the
