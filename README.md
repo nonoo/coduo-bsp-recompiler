@@ -1,5 +1,4 @@
-Call Of Duty 1: United Offensive BSP recompiler
-===============================================
+# Call Of Duty 1: United Offensive BSP recompiler
 
 This vibe coded toolkit can be used to manually edit maps (BSP files),
 for ex. add vehicles to already existing maps.
@@ -9,11 +8,9 @@ for ex. add vehicles to already existing maps.
 
 Note: if no cmdline arg is given to mkbsp then it reads from stdin.
 
-Examples
---------
+## Examples
 
-Adding a BMW motorcycle
-***********************
+### Adding a BMW motorcycle
 
 1. Download the
 [zzz_vehicle_bmw.pk3](https://www.moddb.com/games/call-of-duty-united-offensive/downloads/coduo-mp-vehicles-test-map)
