@@ -17,11 +17,11 @@ Adding a BMW motorcycle
 
 1. Download the
 [zzz_vehicle_bmw.pk3](https://www.moddb.com/games/call-of-duty-united-offensive/downloads/coduo-mp-vehicles-test-map)
-and place it in the **uo** directory of the game.
+and place it in the `uo` directory of the game.
 
 2. Run **dumpbsp**, then open the text for editing.
 
-3. Add this to end of the **Materials lump (0)**:
+3. Add this to end of the `Materials lump (0)`:
 
 ```
 [164] Name: textures/common/clip_nosight_metal, Flags: 0xD040A0 0x28031640
@@ -31,7 +31,7 @@ If you have 12 materials then change index between the [] brackets to 13.
 If you already have a clip_nosight_metal entry then you don't need to add
 another.
 
-4. Go to the **Entities lump (29)** and add this to the end:
+4. Go to the `Entities lump (29)` and add this to the end:
 
 ```
 {
@@ -48,7 +48,7 @@ another.
 }
 ```
 
-5. Add this to the end of the **Models lump (27)**:
+5. Add this to the end of the `Models lump (27)`:
 
 ```
 [5] Mins: (C2500000 C2180000 00000000), Maxs: (42480000 41C00000 42200000)
@@ -63,7 +63,7 @@ index.
 
 You'll need to change the Brushes offset too, but first add the new brushes:
 
-6. Add this to the end of the **Brushes lump (4)**:
+6. Add this to the end of the `Brushes lump (4)`:
 
 ```
 [3369] Sides: 8, MatID: 164
@@ -76,7 +76,7 @@ the first line).
 
 Update the material ID (MatID) to the material index of clip_nosight_metal.
 
-7. Add these new entries to the **Brushsides lump (3)**:
+7. Add these new entries to the `Brushsides lump (3)`:
 
 ```
 [28777] Union: C2500000, MatID: 164
@@ -96,3 +96,10 @@ Update the material ID (MatID) to the material index of clip_nosight_metal.
 ```
 
 Update the material ID (MatID) to the material index of clip_nosight_metal.
+
+8. Add the following line to the .gsc file of your map as described
+[here](https://www.moddb.com/games/call-of-duty-united-offensive/tutorials/vehicles-in-coduo-mp):
+
+```
+level thread maps\mp\_vehdrive_dmod::main();
+```
