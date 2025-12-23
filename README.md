@@ -12,7 +12,8 @@ Note: if no cmdline arg is given to mkbsp then it reads from stdin.
 ## About vehicles
 
 They are defined in the `Entities lump (29)`. There can be multiple vehicle
-entries and one collision map for each vehicle type.
+entries and one collision map for each vehicle type. You can get map
+coordinates in the game with the `/viewpos` console command.
 
 The collision map points to a model in the `Model lump (27)`. The model has
 one or more brushes so it points to the `Brushes lump (4)`. Each brush has
