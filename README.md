@@ -287,7 +287,7 @@ and clip_metal.
 8. Add the vehicle enable function call to the .gsc file and add the .csv file
 to enable vehicle sounds (see previous example).
 
-## Example #2: Adding a rocket launcher
+## Example #3: Adding a rocket launcher
 
 1. Go to the `Entities lump (29)` and add this:
 
@@ -308,5 +308,6 @@ to enable vehicle sounds (see previous example).
 }
 ```
 
-The **spawnflags** is necessary, otherwise the game ignores the Z coordinate of
-the rocket launcher. The **wait** specifies the respawn rate in seconds.
+The **spawnflags** setting is necessary, otherwise the game ignores the Z
+coordinate of the rocket launcher.
+The **wait** setting specifies the respawn rate in seconds.
