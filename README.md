@@ -286,3 +286,27 @@ and clip_metal.
 
 8. Add the vehicle enable function call to the .gsc file and add the .csv file
 to enable vehicle sounds (see previous example).
+
+## Example #2: Adding a rocket launcher
+
+1. Go to the `Entities lump (29)` and add this:
+
+```
+{
+"classname" "mpweapon_panzerfaust"
+"model" "xmodel/weapon_panzerfaust_ammo"
+"origin" "1337 -2627 4"
+"angles" "0 90 0"
+"spawnflags" "9"
+"wait" "30"
+}
+{
+"classname" "script_model"
+"model" "xmodel/ammo_panzerfaust_box3"
+"origin" "1337 -2627 0"
+"angles" "0 0 0"
+}
+```
+
+The **spawnflags** is necessary, otherwise the game ignores the Z coordinate of
+the rocket launcher. The **wait** specifies the respawn rate in seconds.
